@@ -1,6 +1,7 @@
 import React from 'react';
 import Slider, { Settings } from 'react-slick';
 import Image from 'next/image';
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 interface ImageItem {
   src: string;
@@ -10,9 +11,9 @@ interface ImageItem {
 }
 
 const images: ImageItem[] = [
-  { src: '/img.jpeg', alt: 'Plumbing Work', width: '960px', height: '540px' },
-  { src: '/img2.jpeg', alt: 'Septic Installation', width: '1008px', height: '756px' },
-  { src: '/img3.jpeg', alt: 'Sewer Line Work', width: '756px', height: '1008px'  },
+  { src: `${basePath}/img.jpeg`, alt: 'Plumbing Work', width: '960px', height: '540px' },
+  { src: `${basePath}/img2.jpeg`, alt: 'Septic Installation', width: '1008px', height: '756px' },
+  { src: `${basePath}/img3.jpeg`, alt: 'Sewer Line Work', width: '756px', height: '1008px'  },
   // add more images if needed
 ];
 

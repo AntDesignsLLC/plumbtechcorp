@@ -4,12 +4,13 @@ const nextConfig: NextConfig = {
   /* config options here */
 };
 
-const isGithubPages = process.env.NODE_ENV === 'production';
+const repoName = 'plumbtechcorp'; // <- your actual GitHub repo name
+const isProd = process.env.NODE_ENV === 'production';
 
 module.exports = {
-  assetPrefix: isGithubPages ? '/your-repo-name/' : '',
-  basePath: isGithubPages ? '/your-repo-name' : '',
-  trailingSlash: true, // Helps with static export
+  basePath: isProd ? `/${repoName}` : '',
+  assetPrefix: isProd ? `/${repoName}/` : '',
+  trailingSlash: true, // required for static exports on GitHub Pages
 };
 
 

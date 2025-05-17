@@ -1,7 +1,7 @@
 'use client';
 import Head from 'next/head';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 import Gallery from './component/Gallery';
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
     <div
       className="min-h-screen bg-cover bg-center"
       style={{
-        backgroundImage: "url('/images/plumbtech-bg.png')",
+        backgroundImage: `url('${basePath}/images/plumbtech-bg.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
@@ -40,7 +40,7 @@ export default function Home() {
         <div className="container mx-auto flex justify-between items-center">
         <div className="h-16 overflow-hidden flex items-center">
           <Image
-            src="/logo.png"
+            src={`${basePath}/logo.png`}
             alt="Plumbtech Corp Logo"
             width={110} // increased width
             height={110} // increased height
@@ -72,7 +72,7 @@ export default function Home() {
       <main className="container mx-auto p-6">
         <section
           className="relative min-h-screen flex items-center justify-center text-center text-white bg-cover bg-center"
-          style={{ backgroundImage: `url('/images/plumbing.gif')`, backgroundSize: 'cover' }}
+          style={{ backgroundImage: `url('${basePath}/images/plumbing.gif')`, backgroundSize: 'cover' }}
         >
           <div className="relative z-10 px-4 max-w-xl text-right ml-100">
             <h1 className="text-4xl font-bold mb-4 text-blue-500 drop-shadow-lg"
@@ -107,7 +107,6 @@ export default function Home() {
               { title: 'Drain Line Breakage Camera Locate', desc: 'Advanced camera technology to accurately locate and diagnose breakages.' }
             ].map((service, index) => (
               <div key={index} className="p-4 shadow-lg rounded bg-white border border-blue-200">
-                {/* <Image src="/icons/plunger.svg" alt={service.title} width={64} height={64} className="mx-auto" /> */}
                 <h3 className="text-xl font-semibold mt-4 text-red-600">{service.title}</h3>
                 <p className="text-gray-700">{service.desc}</p>
               </div>
