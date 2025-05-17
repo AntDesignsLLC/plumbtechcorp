@@ -36,7 +36,7 @@ export default function Home() {
         </div>
       </div>
 
-      <header className="bg-white text-black p-4 sticky top-0 z-50 shadow">
+      <header className="bg-white text-black p-4 top-0 z-50 shadow">
         <div className="container mx-auto flex flex-col items-center md:flex-row md:justify-between md:items-center">
           <div className="h-16 flex items-center justify-center mb-2 md:mb-0">
             <Image
@@ -68,7 +68,7 @@ export default function Home() {
           </nav>
         </div>
       </header>
-      
+
       <main className="container mx-auto p-4 sm:p-6">
         <section
           className="relative min-h-screen flex items-center justify-center text-center text-white bg-cover bg-center"
