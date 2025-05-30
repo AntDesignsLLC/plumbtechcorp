@@ -25,6 +25,10 @@ export default function Home() {
         <meta name="keywords" content="Plumbtech, plumbing services Miami, sewer main, drain clog, camera inspection, plumber Miami, drain cleaning" />
         <meta name="author" content="Plumbtech Corp" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:image" content={`${basePath}/logo.png`} />
+        <meta property="og:url" content="https://plumbtechcorp.com/" />
+        <meta name="twitter:image" content={`${basePath}/logo.png`} />
+        <meta property="og:type" content="website" />
       </Head>
 
       <div className="bg-red-600 text-white text-center py-4 px-2">
@@ -106,7 +110,9 @@ export default function Home() {
               { title: 'Clear Sewer Main', desc: 'We clear out blockages in your main sewer lines quickly and efficiently.' },
               { title: 'Clear Drain Clog or Blockage', desc: 'Resolve drain clogs fast to restore water flow and prevent backups.' },
               { title: 'Sewer Main Install or Replace', desc: 'Full installation and replacement of main sewer lines with minimal disruption.' },
-              { title: 'Drain Line Breakage Camera Locate', desc: 'Advanced camera technology to accurately locate and diagnose breakages.' }
+              { title: 'Drain Line Breakage Camera Locate', desc: 'Advanced camera technology to accurately locate and diagnose breakages.' },
+              { title: 'Septic Tank Pump outs', desc: 'Reliable removal of waste and buildup from your septic tank to ensure proper system function and prevent backups.' },
+              { title: 'Drainfield Restorations', desc: 'Restores the efficiency of your septic drainfield by addressing clogs, saturation, and soil failure using proven techniques.' }
             ].map((service, index) => (
               <div key={index} className="p-4 shadow-lg rounded bg-white border border-blue-200">
                 <h3 className="text-xl font-semibold mt-4 text-red-600">{service.title}</h3>
