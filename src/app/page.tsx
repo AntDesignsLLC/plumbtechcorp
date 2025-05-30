@@ -25,7 +25,7 @@ export default function Home() {
         <meta name="keywords" content="Plumbtech, plumbing services Miami, sewer main, drain clog, camera inspection, plumber Miami, drain cleaning" />
         <meta name="author" content="Plumbtech Corp" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:image" content={`${basePath}/logo.png`} />
+        <meta property="og:image" content={`${basePath}/logo.jpeg`} />
         <meta property="og:url" content="https://plumbtechcorp.com/" />
         <meta name="twitter:image" content={`${basePath}/logo.png`} />
         <meta property="og:type" content="website" />
