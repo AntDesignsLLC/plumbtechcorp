@@ -13,7 +13,12 @@ interface ImageItem {
 const images: ImageItem[] = [
   { src: `${basePath}/img.jpeg`, alt: 'Plumbing Work', width: '960px', height: '540px' },
   { src: `${basePath}/img2.jpeg`, alt: 'Septic Installation', width: '1008px', height: '756px' },
-  { src: `${basePath}/img3.jpeg`, alt: 'Sewer Line Work', width: '756px', height: '1008px'  },
+  { src: `${basePath}/img3.jpeg`, alt: 'Sewer Line Work', width: '756px', height: '1008px' },
+  { src: `${basePath}/img4.jpeg`, alt: 'Sewer Line Work', width: '756px', height: '1008px' },
+  { src: `${basePath}/img5.jpg`, alt: 'Sewer Line Work', width: '756px', height: '756px' },
+  { src: `${basePath}/img6.jpg`, alt: 'Sewer Line Work', width: '756px', height: '880px' },
+  { src: `${basePath}/img7.jpg`, alt: 'Sewer Line Work', width: '756px', height: '1344px' },
+  { src: `${basePath}/img8.jpg`, alt: 'Sewer Line Work', width: '756px', height: '642px' },
   // add more images if needed
 ];
 
@@ -43,12 +48,12 @@ const Gallery: React.FC = () => {
       <Slider {...sliderSettings}>
         {images.map(({ src, alt, width, height }, idx) => (
           <div key={idx} className="px-2">
-            <div style={{ position: 'relative', width: '100%', height: height }}>
+            <div className="flex justify-center items-center w-full h-full">
               <Image
                 src={src}
                 alt={alt}
-                layout="fill"
-                objectFit="cover"
+                width={parseInt(width)}
+                height={parseInt(height)}
                 className="rounded shadow-md"
                 priority={idx === 0}
               />
