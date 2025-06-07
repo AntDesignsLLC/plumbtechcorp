@@ -16,21 +16,28 @@ export default function Home() {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <Head>
-        <title>Plumbtech Corp | Miami Plumbing Services & Drain Experts</title>
-        <meta
-          name="description"
-          content="Plumbtech Corp is a trusted plumbing company in Miami offering expert plumbing services including sewer main clearing, drain unclogging, and camera inspection."
-        />
-        <meta name="keywords" content="Plumbtech, plumbing services Miami, sewer main, drain clog, camera inspection, plumber Miami, drain cleaning" />
-        <meta name="author" content="Plumbtech Corp" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:title" content="Plumbtech Corp" />
-        <meta property="og:description" content="Plumbtech Corp is a trusted plumbing company in Miami offering expert plumbing services including sewer main clearing, drain unclogging, and camera inspection." />
-        <meta property="og:image" content={`${basePath}/messageLogo.png`} />
-        <meta property="og:url" content="https://plumbtechcorp.com/" />
-        <meta property="og:type" content="website" />
-      </Head>
+      <html prefix="og: http://ogp.me/ns#">
+        <Head>
+          <title>Plumbtech Corp | Miami Plumbing Services & Drain Experts</title>
+          <meta
+            name="description"
+            content="Plumbtech Corp is a trusted plumbing company in Miami offering expert plumbing services including sewer main clearing, drain unclogging, and camera inspection."
+            />
+          <meta name="keywords" content="Plumbtech, plumbing services Miami, sewer main, drain clog, camera inspection, plumber Miami, drain cleaning" />
+          <meta name="author" content="Plumbtech Corp" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta property="og:title" content="Plumbtech Corp" />
+          <meta property="og:description" content="Plumbtech Corp is a trusted plumbing company in Miami offering expert plumbing services including sewer main clearing, drain unclogging, and camera inspection." />
+          <meta property="og:image" content={`http://plumbtechcorp.com/messageLogo.png`} />
+          <meta property="og:image:url" content={`${basePath}/messageLogo.png`} />
+          <meta property="og:image:secure_url" content={`${basePath}/messageLogo.png`} />
+          <meta property="og:image:type" content="image/jpeg" /> 
+          <meta property="og:image:width" content="1200" /> 
+          <meta property="og:image:height" content="630" />
+          <meta property="og:url" content="https://plumbtechcorp.com/" />
+          <meta property="og:type" content="website" />
+        </Head>
+      </html>
 
       <div className="bg-red-600 text-white text-center py-4 px-2">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-sm sm:text-base">
@@ -197,10 +204,10 @@ export default function Home() {
 
       <footer className="bg-blue-900 text-white p-4 sm:p-6 text-center">
         <p>&copy; {new Date().getFullYear()} Plumbtech Corp. All rights reserved.</p>
-        <p>
+        {/* <p>
           <a href="/privacy">Privacy Policy</a> |{' '}
           <a href="/terms">Terms of Service</a>
-        </p>
+        </p> */}
       </footer>
     </div>
   );
